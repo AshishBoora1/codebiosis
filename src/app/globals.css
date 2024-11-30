@@ -1,0 +1,371 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*FONTS*/
+
+@font-face {
+  font-family: "Satoshi-Variable";
+  src: url("/fonts/Satoshi-Variable.woff2") format("woff2"),
+    url("/fonts/Satoshi-Variable.woff") format("woff"),
+    url("/fonts/Satoshi-Variable.ttf") format("truetype");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+/**
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 900.0;
+*
+* available axes:
+
+* 'wght' (range from 300.0 to 900.0)
+
+*/
+
+@font-face {
+  font-family: "Satoshi-Variable";
+  src: url("/fonts/Satoshi-VariableItalic.woff2") format("woff2"),
+    url("/fonts/Satoshi-VariableItalic.woff") format("woff"),
+    url("/fonts/Satoshi-VariableItalic.ttf") format("truetype");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Light.woff2") format("woff2"),
+    url("/fonts/Satoshi-Light.woff") format("woff"),
+    url("/fonts/Satoshi-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-LightItalic.woff2") format("woff2"),
+    url("/fonts/Satoshi-LightItalic.woff") format("woff"),
+    url("/fonts/Satoshi-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Regular.woff2") format("woff2"),
+    url("/fonts/Satoshi-Regular.woff") format("woff"),
+    url("/fonts/Satoshi-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Italic.woff2") format("woff2"),
+    url("/fonts/Satoshi-Italic.woff") format("woff"),
+    url("/fonts/Satoshi-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Medium.woff2") format("woff2"),
+    url("/fonts/Satoshi-Medium.woff") format("woff"),
+    url("/fonts/Satoshi-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-MediumItalic.woff2") format("woff2"),
+    url("/fonts/Satoshi-MediumItalic.woff") format("woff"),
+    url("/fonts/Satoshi-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Bold.woff2") format("woff2"),
+    url("/fonts/Satoshi-Bold.woff") format("woff"),
+    url("/fonts/Satoshi-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-BoldItalic.woff2") format("woff2"),
+    url("/fonts/Satoshi-BoldItalic.woff") format("woff"),
+    url("/fonts/Satoshi-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Black.woff2") format("woff2"),
+    url("/fonts/Satoshi-Black.woff") format("woff"),
+    url("/fonts/Satoshi-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-BlackItalic.woff2") format("woff2"),
+    url("/fonts/Satoshi-BlackItalic.woff") format("woff"),
+    url("/fonts/Satoshi-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: italic;
+}
+
+body,
+html,
+* {
+  font-family: "Satoshi";
+}
+
+/* styles/Preloader.css */
+
+@keyframes infiniteScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.infinteContainer {
+  width: 100%;
+  overflow-x: hidden;
+}
+.horizontal-scrolling-items {
+  display: flex;
+  font-size: 40px;
+  width: 2600px;
+  animation-name: infiniteScroll;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.horizontal-scrolling-items__item {
+  white-space: nowrap;
+}
+
+.rotate180 {
+  rotate: 180deg;
+}
+
+.switchParent {
+  padding: 4px;
+  background-color: black;
+  border-radius: 25px;
+  cursor: pointer;
+  overflow: hidden;
+  height: fit-content;
+  width: fit-content;
+}
+.switch {
+  position: relative;
+  width: 120px;
+  height: 40px;
+  background-color: black;
+  border-radius: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  color: white;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.playing {
+  left: 60%;
+  color: black;
+}
+
+.stopped {
+  left: 0;
+  color: black;
+}
+
+.lottieLogo {
+  max-width: 200px;
+}
+
+.bg-radial-nav {
+  background: rgb(62, 62, 62);
+  background: radial-gradient(
+    circle,
+    rgba(106, 106, 106, 0.9) 0%,
+    rgba(43, 43, 43, 0.9) 96%
+  );
+}
+
+.Animatedbutton .svg {
+  position: absolute;
+  top: 0;
+  overflow: visible;
+  left: 0;
+  z-index: 0;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 600;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-button-ellipse {
+  animation: dash 2s linear;
+}
+.ob-img {
+  align-items: center;
+  justify-content: space-between;
+}
+.ob-img img {
+  object-fit: contain;
+  height: 26px;
+}
+
+/* swiper dots*/
+#testimonials .swiper-pagination-bullet {
+  display: none !important;
+}
+#oursolution .swiper-pagination-bullet {
+  display: none !important;
+}
+
+@media (max-width: 1024px) {
+  /* .slick-dots li {
+    margin: 5px !important;
+    width: 8px !important;
+    height: 8px!important;
+  }
+
+  .slick-dots li button,.slick-dots li button:before  {
+    font-size: 0;
+    line-height: 8px !important;
+    display: block;
+    width: 8px !important;
+    height: 8px!important;
+    padding: 0 !important;
+    cursor: pointer;
+    color: transparent;
+    border: 3px solid black !important;
+    border-radius: 100% !important;
+    outline: none;
+    background: transparent;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1 !important;
+  color: black;
+  margin: -0.7px !important;
+} */
+
+  #testimonials
+    .swiper-vertical
+    > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+  #testimonials
+    .swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+    top: 90% !important;
+    transform: translateY(-50%) rotate(90deg) !important;
+    transform: rotate(0deg) !important;
+    rotate: 90deg !important;
+    transform: translateX(-50%) !important;
+    left: 55% !important;
+    width: 8px;
+  }
+  #testimonials
+    .swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic
+    span {
+    border: 3px solid #000 !important;
+    /* background-color: black !important;; */
+  }
+
+  #testimonials .swiper-pagination-bullet {
+    display: flex !important;
+    width: 8px !important; /* Set the desired width */
+    height: 8px !important; /* Set the desired height */
+    border: 1px solid #000 !important; /* Default color for dots */
+    opacity: 1; /* Ensure full visibility */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Change color for the active dot */
+  #testimonials .swiper-pagination-bullet {
+    background-color: transparent !important; /* Active dot color */
+  }
+  #testimonials .swiper-pagination-bullet-active {
+    background-color: #000 !important; /* Active dot color */
+  }
+
+  #oursolution
+    .swiper-vertical
+    > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+  #oursolution
+    .swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+    top: 90% !important;
+    transform: translateY(-50%) rotate(90deg) !important;
+    transform: rotate(0deg) !important;
+    rotate: 90deg !important;
+    transform: translateX(-50%) !important;
+    left: 55% !important;
+    width: 8px;
+  }
+  #oursolution
+    .swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic
+    span {
+    border: 3px solid #000 !important;
+    /* background-color: black !important;; */
+  }
+
+  #oursolution .swiper-pagination-bullet {
+    display: flex !important;
+    width: 8px !important; /* Set the desired width */
+    height: 8px !important; /* Set the desired height */
+    border: 1px solid #000 !important; /* Default color for dots */
+    opacity: 1; /* Ensure full visibility */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Change color for the active dot */
+  #oursolution .swiper-pagination-bullet {
+    background-color: transparent !important; /* Active dot color */
+  }
+  #oursolution .swiper-pagination-bullet-active {
+    background-color: #000 !important; /* Active dot color */
+  }
+}
